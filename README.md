@@ -157,3 +157,28 @@ Navigator is like a stack, When navitagor .push, the previous layer will be over
 4. Make a class for the budget form that contains the "attributes" of the form.
 5. Make a validator to restrict certain inputs. 
 7. Make a new file called budget.dart to show the content from form.dart with cards.
+
+# WEEKLY ASSIGNMENT 09
+
+## Can we retrieve JSON data without creating a model first? If yes, is it better than creating a model before retrieving JSON data?
+It should be possible, by converting the json data directly after being decoded from the url. But, it's rare to use this method, even from the Flutter documentation, it creates a models folder first. So in my opinion it is not better than making a model first because it is more difficult to read and inefficient.
+
+
+## List the widgets that you used in this project and explain their functions.
+
+- Drawer: To make a drawer in switching pages
+- Container: contain widget widgets
+- ListView: For grouping multiple items and can be scrolled in the view
+- FutureBuilder: For creating widgets based on interaction with widgets and for fetching data
+
+## Explain the mechanism of retrieving data from json so it can be shown in Flutter.
+First, Add the http package with the flutter pub add http command and provide internet access to the project being created by adding a few lines of code to the file android/app/src/main/AndroidManifest.xml. Then,the json data is obtained by fetching the method in the fetchwatchlist.dart file. After that, the fetched data will be converted based on the code in my watchlist.dart on the model folder.
+
+## IMPLEMENTATION
+1. Make two new folders which are "model" and "page"
+2. Move the budger.dart, drawer.dart, form.dart files into the folder page
+3. Add a file on model containing the model from the converted json from watchlist.
+4. Add fetchwatchlist.dart to fetch the data from the watchlist url.
+5. Add My watchlist tile on the drawer.dart
+6. Add mywatchlistpage.dart from the iteration on fetchwatchlist.dart
+7. git add,commit,push.
